@@ -19,7 +19,7 @@ Kod podzielony jest na moduły z plikami nagłówkowymi (`include/`) i źródło
 
 ---
 
-## 📁 Struktura projektu
+## Struktura projektu
 
 MetodyNumeryczne_lib/
 ├── include/ # Pliki nagłówkowe (.h)
