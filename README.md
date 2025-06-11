@@ -46,12 +46,13 @@ MetodyNumeryczne_lib/
 - Opcjonalnie: Visual Studio 2022 (pełna integracja z CMake)
 
 ### Opcja 1: Budowa przez `CMake` (zalecana)
+    
+    ```bash
+    mkdir build
+    cd build
+    cmake ..
+    cmake --build .
 
-```bash
-mkdir build
-cd build
-cmake ..
-cmake --build .
 
 To utworzy bibliotekę libnumlib.a oraz wszystkie przykłady i testy jako osobne pliki wykonywalne.
 
