@@ -22,12 +22,19 @@ Kod podzielony jest na moduły z plikami nagłówkowymi (`include/`) i źródło
 ## Struktura projektu
 
 MetodyNumeryczne_lib/
+
 ├── include/ # Pliki nagłówkowe (.h)
+
 ├── src/ # Pliki źródłowe (.cpp)
+
 ├── tests/ # Testy jednostkowe
+
 ├── examples/ # Przykłady użycia
+
 ├── CMakeLists.txt # Plik budujący CMake
+
 ├── Makefile # Alternatywny plik Make
+
 └── README.md # Dokumentacja
 
 ## Jak zbudować projekt
