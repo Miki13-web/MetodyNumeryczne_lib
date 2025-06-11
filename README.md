@@ -1,70 +1,74 @@
 # MetodyNumeryczne_lib
-Twórcy Mikołaj Bednarczyk i Jakub Bednarczyk
 
-Prosta biblioteka numeryczna w C++ stworzona w ramach laboratorium z "Metod numerycznych". Biblioteka implementuje podstawowe algorytmy numeryczne.
+**Autorzy:** Mikołaj Bednarczyk i Jakub Bednarczyk  
+**Projekt:** Biblioteka numeryczna w języku C++ stworzona w ramach laboratorium z przedmiotu *Metody Numeryczne*.
 
-## Zakres funkcjonalny
+---
 
-Biblioteka zawiera funkcje z następujących kategorii:
-*   Rozwiązywanie układów równań liniowych (metoda eliminacji Gaussa).
-*   Interpolacja (wielomian Lagrange'a).
-*   Aproksymacja (metoda najmniejszych kwadratów).
-*   Całkowanie numeryczne (metody prostokątów, trapezów, Simpsona).
-*   Rozwiązywanie równań różniczkowych (metody Eulera i RK4).
-*   Rozwiązywanie równań nieliniowych (metody bisekcji, Newtona, siecznych).
+## Opis
 
-## Struktura projektu
+`MetodyNumeryczne_lib` to prosta biblioteka C++ implementująca popularne metody obliczeń numerycznych, obejmująca m.in.:
+
+- rozwiązywanie układów równań liniowych,
+- interpolację i aproksymację,
+- całkowanie numeryczne,
+- metody numeryczne równań różniczkowych,
+- rozwiązywanie równań nieliniowych.
+
+Kod podzielony jest na moduły z plikami nagłówkowymi (`include/`) i źródłowymi (`src/`), zawiera testy jednostkowe oraz przykłady użycia.
+
+---
+
+## 📁 Struktura projektu
 
 MetodyNumeryczne_lib/
 ├── include/ # Pliki nagłówkowe (.h)
 ├── src/ # Pliki źródłowe (.cpp)
 ├── tests/ # Testy jednostkowe
 ├── examples/ # Przykłady użycia
-├── Makefile # Plik budujący projekt
-└── README.md # Ta dokumentacja
+├── CMakeLists.txt # Plik budujący CMake
+├── Makefile # Alternatywny plik Make
+└── README.md # Dokumentacja
 
-## Jak zbudować i uruchomić
+## Jak zbudować projekt
 
 ### Wymagania
-*   Kompilator C++ (np. g++)
-*   Program `make`
 
-### Budowa
-1.  **Zbudowanie biblioteki i przykładów:**
-    ```bash
-    make
-    ```
-    Spowoduje to utworzenie biblioteki statycznej `libnumlib.a` oraz plików wykonywalnych w katalogu głównym.
+- Kompilator C++ (np. `g++`, `clang++`, MSVC)
+- `make` (dla Makefile) lub `cmake` (dla nowoczesnego budowania)
+- Opcjonalnie: Visual Studio 2022 (pełna integracja z CMake)
 
-2.  **Uruchomienie przykładów:**
-    ```bash
-    ./example_nonlinear
-    ./example_lineq
-    # itd.
-    ```
+### Opcja 1: Budowa przez `CMake` (zalecana)
 
-3.  **Zbudowanie i uruchomienie testów:**
-    ```bash
-    make tests
-    ```
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build .
 
-4.  **Czyszczenie:**
-    Aby usunąć wszystkie skompilowane pliki, użyj polecenia:
-    ```bash
-    make clean
-    ```
+To utworzy bibliotekę libnumlib.a oraz wszystkie przykłady i testy jako osobne pliki wykonywalne.
 
-## Przykłady użycia
+Zakres funkcjonalny
+Moduł	Funkcje
+Układy równań	gauss_solve – rozwiązanie układu liniowego metodą eliminacji Gaussa
+Interpolacja	obliczRozniceDzielone, wartoscInterpolacjiNewtona
+Aproksymacja	approx, compute_system, gauss_solve
+Całkowanie	simpson, trapezoidal, rectangle, gaussLegendreIntegration
+Równania ODE	eulerCooling, rk4_step, heun_step, midpoint_step
+Równania nieliniowe	bisekcja, newton, secant, regula_falsi
 
-W katalogu `examples/` znajduje się kilka plików demonstrujących użycie biblioteki. Można je zbudować poleceniem `make`.
 
-*   `example_nonlinear`: Pokazuje, jak znaleźć miejsca zerowe funkcji `cos(x) - x` za pomocą metod bisekcji i Newtona.
-*   `example_lineq`: Demonstruje rozwiązywanie układu równań liniowych 3x3.
-*   `example_interpolation`: Używa interpolacji Lagrange'a do oszacowania wartości funkcji na podstawie kilku znanych punktów (węzłów).
-*   `example_integration`: Oblicza całkę z `sin(x)` trzema różnymi metodami i porównuje wyniki z wartością dokładną.
-*   `example_approximation`: Znajduje wielomian najlepiej aproksymujący bardziej złożoną funkcję na zadanym przedziale.
-*   `example_diffeq`: Rozwiązuje równanie różniczkowe modelujące wzrost populacji (równanie logistyczne) za pomocą metody RK4.
+Plik	Demonstracja funkcjonalności
+example_nonlinear.cpp	Metody bisekcji, siecznych i Newtona dla funkcji nieliniowych
+example_lineq.cpp	Rozwiązywanie układów równań liniowych 2x2 i 3x3
+example_interpolation.cpp	Interpolacja Newtona na bazie punktów
+example_integration.cpp	Porównanie metod prostokątów, trapezów i Simpsona
+example_approximation.cpp	Aproksymacja funkcji wielomianem najmniejszych kwadratów
+example_diffeq.cpp	Rozwiązywanie równań różniczkowych metodą Eulera i RK4
 
-## API Biblioteki
+Uwagi końcowe
+    Projekt działa zarówno na Linux, Windows, jak i macOS.
+    Kod zgodny z C++17, modularny i dokumentowany.
+    Testy i przykłady można rozbudowywać samodzielnie.
 
-(Szczegółowy opis funkcji, ich parametrów i wartości zwracanych znajduje się w plikach nagłówkowych w katalogu `include/`.)
+
