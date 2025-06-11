@@ -1,4 +1,5 @@
 # MetodyNumeryczne_lib
+Twórcy Mikołaj Bednarczyk i Jakub Bednarczyk
 
 Prosta biblioteka numeryczna w C++ stworzona w ramach laboratorium z "Metod numerycznych". Biblioteka implementuje podstawowe algorytmy numeryczne.
 
