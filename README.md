@@ -57,26 +57,42 @@ MetodyNumeryczne_lib/
 To utworzy bibliotekę libnumlib.a oraz wszystkie przykłady i testy jako osobne pliki wykonywalne.
 
 Zakres funkcjonalny
+
 Moduł	Funkcje
+
 Układy równań	gauss_solve – rozwiązanie układu liniowego metodą eliminacji Gaussa
+
 Interpolacja	obliczRozniceDzielone, wartoscInterpolacjiNewtona
+
 Aproksymacja	approx, compute_system, gauss_solve
+
 Całkowanie	simpson, trapezoidal, rectangle, gaussLegendreIntegration
+
 Równania ODE	eulerCooling, rk4_step, heun_step, midpoint_step
+
 Równania nieliniowe	bisekcja, newton, secant, regula_falsi
 
 
 Plik	Demonstracja funkcjonalności
+
 example_nonlinear.cpp	Metody bisekcji, siecznych i Newtona dla funkcji nieliniowych
+
 example_lineq.cpp	Rozwiązywanie układów równań liniowych 2x2 i 3x3
+
 example_interpolation.cpp	Interpolacja Newtona na bazie punktów
+
 example_integration.cpp	Porównanie metod prostokątów, trapezów i Simpsona
+
 example_approximation.cpp	Aproksymacja funkcji wielomianem najmniejszych kwadratów
+
 example_diffeq.cpp	Rozwiązywanie równań różniczkowych metodą Eulera i RK4
 
 Uwagi końcowe
+
     Projekt działa zarówno na Linux, Windows, jak i macOS.
+    
     Kod zgodny z C++17, modularny i dokumentowany.
+    
     Testy i przykłady można rozbudowywać samodzielnie.
 
 
