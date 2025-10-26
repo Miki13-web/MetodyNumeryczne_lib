@@ -15,7 +15,7 @@
 - metody numeryczne równań różniczkowych,
 - rozwiązywanie równań nieliniowych.
 
-Kod podzielony jest na moduły z plikami nagłówkowymi (`include/`) i źródłowymi (`src/`), zawiera testy jednostkowe oraz przykłady użycia.
+Kod podzielony jest na moduły z plikami nagłówkowymi (`include/`) i źródłowymi (`src/`), zawiera testy jednostkowe oraz liczne przykłady użycia.
 
 ---
 
